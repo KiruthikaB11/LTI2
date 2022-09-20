@@ -1,0 +1,22 @@
+<h1>Login Form</h1>
+<form #loginform=ngForm (ngSubmit)="onSubmit(loginform)">
+    <p>
+        <label for="firstname">Firstname</label>
+        <input type="text" name="firstname" ngModel>
+        </p>
+    <p>
+        <p>
+        <label for="lastname">Lastname</label>
+        <input type="text" name="lastname" ngModel>
+        </p>
+    <p>
+        <button type="submit" value="submit">Submit</button>
+    </p>
+
+
+</form>
+<h3> Form Data {{loginform.value | json }}</h3>
+<h3> Form Control Touched  means not fresh{{loginform.touched}}</h3>
+<h3> Form Control Dirty {{loginform.dirty}}</h3>
+<h3> Form Control Pristine means fresh{{loginform.pristine}}</h3>
+<h3> Form Control Submitted {{loginform.submitted}}</h3>
